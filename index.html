@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Invoice - E PENH CO., LTD</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="invoice-container">
+        <!-- Header Section -->
+        <header class="invoice-header">
+            <div class="logo-section">
+               <img src="images.jfif" alt="ePenh Logo" class="logo" style="width: 20%;" height="55%" />
+                <div class="company-details">
+                    <h2 style="margin-left: 30px;">អុី​ <strong>ពេញ</strong> ខូ អិលធីឌី<br>E <strong>PENH</strong> CO., LTD</h2>
+                    <div class="company-info">
+                        <p>លេខអត្តសញ្ញណកម្ម អតប (VAT TIN): K003-901501072</p>
+                        <p>អាសយដ្ឋាន #61 អឺអូហ្សិត ផ្លូវ 240 សង្កាត់តុមុខ ខណ្ឌដូនពេញ រាជធានីភ្នំពេញ</p>
+                        <p>Address: #61EoZ, Street 240, Sangkat Chaktomouk, Khan Daun Penh, Phnom Penh, Cambodia.</p>
+                        <p>អុីម៉េល/Email: info@epenh.com | Website: www.epenh.com</p>
+                        <p>លេខទូរស័ព្ទ/Tel: (855) 23 969 599 / 23 213 123</p>
+                    </div>
+                </div>
+            </div>
+            <h1 class="invoice-title">វិក្កយបត្រអាករ / Tax Invoice</h1>
+            <div class="attend-to">បញ្ជូនទៅ / Attend To:</div>
+        </header>
+        <!-- Customer Information Section -->
+        <section class="customer-info">
+            <div class="info-grid">
+                <div class="info-row">
+                    <label>អតិថិជនឈ្មោះ/Customer Name:</label>
+                    <input type="text" class="editable-field" placeholder="Enter customer name">
+                </div>
+                <div class="info-row">
+                    <label>កាលបរិច្ឆេទវិក្កយបត្រ/Invoice Date:</label>
+                    <input type="date" class="editable-field" id="invoiceDate">
+                </div>
+                <div class="info-row">
+                    <label>មុខតំណែង/Position Title:</label>
+                    <input type="text" class="editable-field" placeholder="Enter position">
+                </div>
+                <div class="info-row">
+                    <label>ថ្ងៃផុតកំណត់/Due Date:</label>
+                    <input type="date" class="editable-field" id="dueDate">
+                </div>
+                <div class="info-row">
+                    <label>ឈ្មោះក្រុមហ៊ុន/Company Name:</label>
+                    <input type="text" class="editable-field" value="SOMA PROPERTIES AND DEVELOPMENT CO.,LTD">
+                </div>
+                <div class="info-row">
+                    <label>លេខរៀងវិក្កយបត្រ/Invoice No:</label>
+                    <input type="text" class="editable-field" value="TINV-2024-0088">
+                </div>
+                <div class="info-row">
+                    <label>លេខអត្តសញ្ញាណកម្ម អតប (VAT TIN):</label>
+                    <input type="text" class="editable-field" value="L001-901907078">
+                </div>
+                <div class="info-row">
+                    <label>លេខទូរស័ព្ទ/Phone Number:</label>
+                    <input type="text" class="editable-field" placeholder="Enter phone number">
+                </div>
+                <div class="info-row full-width">
+                    <label>អាសយដ្ឋានក្រុមហ៊ុន/Company Address:</label>
+                    <input type="text" class="editable-field" value="#94 អាគារ The Commune ខណ្ឌជ្រោយចង្វារ ខេត្តភ្នំពេញ">
+                </div>
+            </div>
+        </section>
+        <!-- Invoice Table -->
+        <table class="invoice-table" id="invoiceTable">
+            <thead>
+                <tr>
+                    <th>ល.រ<br>#</th>
+                    <th>ធាតុ<br>Item</th>
+                    <th>បរិយាយ<br>Description</th>
+                    <th>ចំនួន<br>QTY</th>
+                    <th>តម្លៃឯកតា<br>Fee Rate</th>
+                    <th>ថ្លៃសរុប<br>Amount</th>
+                    <th class="no-print">Action</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceItems">
+                <tr class="invoice-row">
+                    <td>1</td>
+                    <td><input type="text" class="item-input" value="Room Tablets"></td>
+                    <td><textarea class="desc-input">- Vivo 2022 Or T-Mobile Spec's
+- MTK 8168A
+- Android 11
+- 10 Inch Tablet
+- With all license Software
+- Suggest 70 Devices
+- Can use for Housekeeping Application
+- Room Service
+- Telephone PBX App
+- Room Service App
+- General Things as needed</textarea></td>
+                    <td><input type="number" class="qty-input" value="70" min="0"></td>
+                    <td><input type="number" class="rate-input" value="265.00" min="0" step="0.01"></td>
+                    <td class="amount-cell">$18,550.00</td>
+                    <td class="no-print"><button class="remove-btn" onclick="removeRow(this)">Remove</button></td>
+                </tr>
+                <tr class="invoice-row">
+                    <td>2</td>
+                    <td><input type="text" class="item-input" value="Without Battery"></td>
+                    <td><textarea class="desc-input">without battery --new increase update motherboard, new mic system and new update speaker</textarea></td>
+                    <td><input type="number" class="qty-input" value="70" min="0"></td>
+                    <td><input type="number" class="rate-input" value="42.00" min="0" step="0.01"></td>
+                    <td class="amount-cell">$2,940.00</td>
+                    <td class="no-print"><button class="remove-btn" onclick="removeRow(this)">Remove</button></td>
+                </tr>
+                <tr class="invoice-row">
+                    <td>3</td>
+                    <td><input type="text" class="item-input" value="Discount"></td>
+                    <td><textarea class="desc-input"></textarea></td>
+                    <td><input type="number" class="qty-input" value="1" min="0"></td>
+                    <td><input type="number" class="rate-input" value="-1504.30" step="0.01"></td>
+                    <td class="amount-cell">($1,504.30)</td>
+                    <td class="no-print"><button class="remove-btn" onclick="removeRow(this)">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-actions">
+            <button onclick="addRow()" class="add-btn">Add New Item</button>
+        </div>
+        <!-- Totals Section -->
+        <div class="totals-section">
+            <div class="totals-grid">
+                <div class="total-row">
+                    <label>សរុប/Total:</label>
+                    <span id="subtotal">$19,985.70</span>
+                </div>
+                <div class="total-row">
+                    <label>Deposit 60%:</label>
+                    <span id="deposit">$11,991.42</span>
+                </div>
+                <div class="total-row">
+                    <label>អាករលើតម្លៃបន្ថែម 10%/VAT 10%:</label>
+                    <span id="vat">$1,199.14</span>
+                </div>
+                <div class="total-row grand-total">
+                    <label>សរុបធំ/Grand Total (USD):</label>
+                    <span id="grandTotal">$13,190.56</span>
+                </div>
+                <div class="total-row">
+                    <label>សរុបធំជារៀល/Grand Total (៛):</label>
+                    <span id="grandTotalRiel">៛ 53,012,869</span>
+                </div>
+            </div>
+           
+        </div>
+        <!-- Notes and Bank Information -->
+        <section class="notes-section">
+            <h3>កំណត់ចំណាំ / Notes</h3>
+            <div class="bank-info">
+                <h4>Bank Information:</h4>
+                <p>Cash/Cheque to E Penh Co., Ltd</p>
+                <p>Bank: ABA (Advanced Bank of Asia) Account N°: 000308152/Bank Name: E Penh Co.,Ltd</p>
+            </div>
+        </section>
+        <!-- Signature Section -->
+        <section class="signature-section">
+            <div class="signature-grid">
+                <div class="signature-block">
+                    <h4>អ្នកតំណាងរបស់ក្រុមហ៊ុន អុី ពេញ</h4>
+                    <p>E Penh Co.,Ltd authorization</p>
+                    <div class="signature-line">
+                        <p>Name: Hay Dane</p>
+                        <p>Position: Accounting</p>
+                        <p>Date: <span id="signatureDate"></span></p>
+                    </div>
+                </div>
+                <div class="signature-block3">
+                    <h4>ហត្ថលេខា និង ត្រា</h4>
+                    <p>Signature and Stamp</p>
+                </div>
+                <div class="signature-block1">
+                    <h4>អ្នកសំណាង</h4>
+                    <p>Authorization: SOMA PROPERTIES AND DEVELOPMENT CO.,LTD</p>
+                    <div class="signature-line">
+                        <p>Name: ________________</p>
+                        <p>Position: ________________</p>
+                        <p>Date: ________________</p>
+                    </div>
+                </div>
+                <div class="signature-block2">
+                    <h4>ហត្ថលេខា និង ត្រា</h4>
+                    <p>Signature and Stamp</p>
+                </div>
+            </div>
+            <div class="note">
+                <p>សម្គាល់: ច្បាប់ដើមវិក្កយបត្រនេះ សម្រាប់អតិថិជន ច្បាប់ចម្លងសម្រាប់អ្នកលក់</p>
+                <p>Note: Original invoice for customer, copied invoice for seller.</p>
+            </div>
+        </section>
+    </div>
+    <!-- Print Button -->
+    <div class="print-controls">
+        <button onclick="printInvoice()" class="print-btn">🖨️ Print Invoice</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
