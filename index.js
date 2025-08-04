@@ -93,7 +93,7 @@ function addRow() {
         <td><textarea class="desc-input" placeholder="Enter description"></textarea></td>
         <td><input type="number" class="qty-input" value="1" min="0"></td>
         <td><input type="number" class="rate-input" value="0.00" min="0" step="0.01"></td>
-        <td class="amount-cell">$0.00</td>
+        <td class="amount-cell" style="margin-top:5px;">$0.00</td>
         <td class="no-print"><button class="remove-btn" onclick="removeRow(this)">Remove</button></td>
     `
   tbody.appendChild(newRow)

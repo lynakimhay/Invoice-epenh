@@ -80,6 +80,7 @@ font-family: 'Battambang', sans-serif;
   padding: 20px;
   margin-top: 10px;
   border-bottom: 1px solid #e5e7eb;
+  
 }
 
 .info-grid {
@@ -90,7 +91,7 @@ font-family: 'Battambang', sans-serif;
 }
 
 .info-row {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   gap: 5px;
 }
@@ -103,7 +104,10 @@ font-family: 'Battambang', sans-serif;
   font-weight: bold;
   color: #374151;
 }
-
+.full-width input {
+  width: 50%;
+  grid-column: 5 / -1;
+}
 .editable-field {
   padding: 5px 8px;
   border: 1px solid #d1d5db;
@@ -356,7 +360,8 @@ font-family: 'Battambang', sans-serif;
     padding: 0 !important;
     font-size: 9px !important;
     line-height: 1.1 !important;
-font-family: 'Battambang', sans-serif;  }
+    font-family: 'Battambang', sans-serif; 
+}
 
   .invoice-container {
     box-shadow: none !important;
@@ -437,23 +442,23 @@ font-family: 'Battambang', sans-serif;
   .info-row input {
     font-size: 10px !important;
   }
+  
 
   /* Adjust table for print - Compact */
   /* .invoice-table {
     font-size: 7px !important;
     margin: 2px !important;
   } */
-  .invoice-table th,
+  /* .invoice-table th,
   .invoice-table td {
     padding: 1px !important;
     border: 1px solid #000 !important;
     font-size: 9px;
-  }
+  } */
 
   .invoice-table th {
     background-color: #1e3a8a !important;
     color: white !important;
-    font-family: 'Battambang', sans-serif;
 
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
@@ -467,23 +472,29 @@ font-family: 'Battambang', sans-serif;
   }
   .qty-input {
     font-size: 9px !important;
+    margin-top: 5px;
+    margin-left: 20px;
   }
   .rate-input {
     font-size: 9px !important;
+    margin-top: 5px;
+    margin-left: 20px;
   }
   .desc-input {
     min-height: 30px !important;
     font-size: 10px !important;
   }
   .invoice-row td {
-    font-size: 9px;
+    font-size: 10px;
     
   }
+
 
   /* Adjust totals section for print */
   .totals-section {
     padding: 8px !important;
     background-color: transparent !important;
+    font-family: 'Battambang', sans-serif; 
   }
 
   .totals-grid {
@@ -492,7 +503,7 @@ font-family: 'Battambang', sans-serif;
 
   .grand-total label,
   .grand-total span {
-    font-size: 8px !important;
+    font-size: 10px !important;
   }
 
   /* Adjust notes and signature sections for print */
@@ -539,17 +550,17 @@ font-family: 'Battambang', sans-serif;
 
   .signature-block2 p {
     font-size: 10px !important;
-    font-family: 'Khmer OS Siem Reap', sans-serif;
+    font-family: 'Battambang', sans-serif;
 
   }
   .signature-block1 p {
     font-size: 10px !important;
-    font-family: 'Khmer OS Siem Reap', sans-serif;
+    font-family: 'Battambang', sans-serif;
 
   }
   .signature-block3 p {
     font-size: 10px !important;
-    font-family: 'Khmer OS Siem Reap', sans-serif;
+    font-family: 'Battambang', sans-serif;
 
   }
   .signature-block h4 {
@@ -557,15 +568,14 @@ font-family: 'Battambang', sans-serif;
   }
   .signature-block1 h4{
     font-size: 12px !important;
-     font-family: 'Khmer OS Siem Reap , Arial', sans-serif;
   }
     .signature-block2 h4{
     font-size: 12px !important;
-     font-family: 'Khmer OS SiemReap , Arial', sans-serif;
+     
   }
     .signature-block3 h4{
     font-size: 12px !important;
-     font-family: 'Khmer OS Siem Reap , Arial', sans-serif;
+    
   }
  
 
